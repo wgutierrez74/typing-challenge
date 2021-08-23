@@ -1,0 +1,51 @@
+<html>
+	<head>
+	  	<title>Typing Challenge</title>
+	  	<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	  	<link rel="stylesheet" href="style.css">
+	  	<script src="typing.js"></script>  	
+	</head>
+	<body onload="appLoad()">
+		<div>
+			<div class="header mt-1">
+				<span class="title">Typing Challenge:</span>
+			</div>
+		</div>
+		<div class="container-fluid mt-3">
+			<div class="row blue pr-3 pb-3 pt-2">
+				<div class="col-md-8" id="sample-pane">
+					<!--Sample Text & Typing Pane -->
+					<div class="row" style="height:50%;">
+						<div class="col-md-12">
+							<h2>Sample Text:</h2>
+							<div class="focused-text" style="height: 70%">
+								<span id="sample-text"></span>
+							</div>
+						</div>
+					</div>
+					<div id="bottom-pane" class="row" style="height:50%;">
+						<!--Elements added Dynamically-->
+					</div>
+				</div>
+				<div class="col-md-4 mt-2 mb-1 green">
+					<!--Useage Statistics Pane -->
+					<div>
+						<h2><strong>Start typing sample text to begin test!</strong></h2>
+						<h4><em>Challenge Statistics:</em></h4>
+						<h6>Time Elapsed: <span id="time-elapsed">0:00</span></h6>
+						<h6>Number of Words Typed: <span id="words-typed"></span></h6>
+						<h6 id="wpm-title">Words per Minute: <span id="words-per-minute"></span></h6>
+						<h6 id="ep-title">Error Percentage: <span id="error-percentage"></span></h6>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1 offset-5 mt-3">
+					<button id="reset-button" class="btn btn-danger ml-1" onclick="setupBuild()">Reset</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
